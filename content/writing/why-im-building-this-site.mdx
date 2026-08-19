@@ -1,0 +1,50 @@
+---
+title: "Why I'm Building This Site"
+description: "Example content that demonstrates the writing system and article typography. Replace or remove before publishing."
+date: "2026-08-19"
+tags:
+  - Site
+  - Engineering Notes
+slug: "why-im-building-this-site"
+published: true
+---
+
+> **Example draft:** this is demonstration content for the site's publishing system. It is not presented as a finished article by Aryan and can be safely replaced or removed.
+
+## A place for useful technical work
+
+This template shows how a longer technical note will read. The aim is to keep the publishing workflow simple: create an `.mdx` file, add frontmatter, and write in Markdown.
+
+Articles can contain ordinary prose, [descriptive links](https://example.com), and inline code such as `evaluation.run()` without adding page-specific application code.
+
+### Structured notes
+
+A technical article often needs more than paragraphs:
+
+- headings that make the argument easy to scan;
+- ordered and unordered lists;
+- tables for compact comparisons;
+- code that remains readable on a small screen; and
+- blockquotes for qualifications or important context.
+
+1. Start with the question.
+2. Make the assumptions explicit.
+3. Show enough evidence to reproduce the conclusion.
+
+| Concern | Useful first check |
+| --- | --- |
+| Retrieval | Inspect the candidate set |
+| Generation | Compare grounded and ungrounded answers |
+| Evaluation | Separate component and end-to-end metrics |
+
+```python
+def reciprocal_rank(relevant_positions: list[int]) -> float:
+    """Return reciprocal rank for a ranked retrieval result."""
+    if not relevant_positions:
+        return 0.0
+    return 1 / min(relevant_positions)
+```
+
+## Replacing this draft
+
+Use this file as a reference for the supported format. Set `published: true` only when an article is ready to appear on the writing index, homepage, sitemap, and RSS feed.
