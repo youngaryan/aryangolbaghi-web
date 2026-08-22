@@ -34,34 +34,33 @@ export default function Home() {
           reliability, and the infrastructure required to evaluate them well.
         </p>
         <div className="hero-links" aria-label="Primary links">
-          <Link className="text-link" href="/writing">
-            Read my writing <span aria-hidden="true">↗</span>
+          <Link className="text-link" href="/work">
+            Work <span aria-hidden="true">→</span>
           </Link>
-          <Link className="text-link quiet-link" href="/research">
-            View research <span aria-hidden="true">→</span>
+          <a
+            className="text-link quiet-link"
+            download="Aryan_Golbaghi_CV.pdf"
+            href="/Aryan_Golbaghi_CV.pdf"
+          >
+            CV <span aria-hidden="true">↓</span>
+          </a>
+          <Link className="text-link quiet-link" href="/about#contact">
+            Contact <span aria-hidden="true">→</span>
           </Link>
         </div>
       </section>
 
-      <section className="home-section" aria-labelledby="writing-heading">
-        <div className="section-heading-row">
-          <h2 id="writing-heading">Selected writing</h2>
-          <Link className="small-link" href="/writing">
-            All writing <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-        {selectedWriting.length > 0 ? (
-          <ArticleList posts={selectedWriting} compact />
-        ) : (
-          <div className="empty-note">
-            <p className="eyebrow">Publication notes</p>
-            <p>
-              The first articles are in preparation. The writing system includes a
-              clearly labelled draft that demonstrates the publishing format.
-            </p>
+      {selectedWriting.length > 0 && (
+        <section className="home-section" aria-labelledby="writing-heading">
+          <div className="section-heading-row">
+            <h2 id="writing-heading">Selected writing</h2>
+            <Link className="small-link" href="/writing">
+              All writing <span aria-hidden="true">→</span>
+            </Link>
           </div>
-        )}
-      </section>
+          <ArticleList posts={selectedWriting} compact />
+        </section>
+      )}
 
       <section className="home-section" aria-labelledby="work-heading">
         <div className="section-heading-row">
@@ -99,13 +98,21 @@ export default function Home() {
             <span>2025</span>
           </div>
           <h3>
-            Enhancing Speech Emotion Recognition via Fine-Tuning Pre-Trained
-            Models and Hyper-Parameter Optimisation
+            <Link href="/research/speech-emotion-recognition">
+              Enhancing Speech Emotion Recognition via Fine-Tuning Pre-Trained
+              Models and Hyper-Parameter Optimisation
+            </Link>
           </h3>
           <p>
             Resource-efficient optimisation for speech emotion recognition using
             pretrained representations, Bayesian optimisation, and TPE.
           </p>
+          <Link
+            className="small-link featured-paper-cta"
+            href="/research/speech-emotion-recognition"
+          >
+            Read the case study <span aria-hidden="true">→</span>
+          </Link>
         </article>
       </section>
     </div>

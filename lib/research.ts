@@ -6,6 +6,7 @@ export type ResearchItem = {
   venue?: string;
   year?: number;
   description: string;
+  detailUrl?: string;
   paperUrl?: string;
   codeUrl?: string;
   projectUrl?: string;
@@ -18,10 +19,14 @@ export const researchItems: ResearchItem[] = [
       "Enhancing Speech Emotion Recognition via Fine-Tuning Pre-Trained Models and Hyper-Parameter Optimisation",
     status: "Published",
     role: "First Author",
+    authors: ["Aryan Golbaghi", "Shuo Zhou"],
     venue: "arXiv",
     year: 2025,
     description:
       "Research into resource-efficient AutoML and hyperparameter optimisation for speech emotion recognition, using pretrained representations, Bayesian optimisation, and TPE.",
+    detailUrl: "/research/speech-emotion-recognition",
+    paperUrl: "https://arxiv.org/abs/2510.07052",
+    codeUrl: "https://github.com/youngaryan/speechbrain-emotion-hpo",
     tags: [
       "Speech emotion recognition",
       "Fine-tuning",

@@ -4,14 +4,29 @@ import { getAllWriting } from "@/lib/writing";
 const baseUrl = "https://aryangolbaghi.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/writing", "/work", "/research", "/about"].map(
-    (path) => ({
+  const pages = [
+    "",
+    "/writing",
+    "/work",
+    "/research",
+    "/research/speech-emotion-recognition",
+    "/about",
+  ].map((path) => ({
       url: `${baseUrl}${path}`,
-      lastModified: new Date("2026-08-19T00:00:00.000Z"),
-      changeFrequency: path === "" ? ("monthly" as const) : ("weekly" as const),
-      priority: path === "" ? 1 : 0.8,
-    }),
-  );
+      lastModified: new Date("2026-08-22T00:00:00.000Z"),
+      changeFrequency:
+        path === "/research/speech-emotion-recognition"
+          ? ("yearly" as const)
+          : path === ""
+            ? ("monthly" as const)
+            : ("weekly" as const),
+      priority:
+        path === ""
+          ? 1
+          : path === "/research/speech-emotion-recognition"
+            ? 0.85
+            : 0.8,
+    }));
 
   const articles = getAllWriting().map((post) => ({
     url: `${baseUrl}/writing/${post.slug}`,

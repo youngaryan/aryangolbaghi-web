@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { researchItems } from "@/lib/research";
 
 export const metadata: Metadata = {
@@ -45,6 +46,9 @@ export default function ResearchPage() {
               </ul>
               {(item.paperUrl || item.codeUrl || item.projectUrl) && (
                 <div className="research-links">
+                  {item.detailUrl && (
+                    <Link href={item.detailUrl}>Read case study</Link>
+                  )}
                   {item.paperUrl && <a href={item.paperUrl}>Paper</a>}
                   {item.codeUrl && <a href={item.codeUrl}>Code</a>}
                   {item.projectUrl && <a href={item.projectUrl}>Project</a>}
@@ -55,10 +59,6 @@ export default function ResearchPage() {
         ))}
       </div>
 
-      <p className="page-note">
-        Paper, code, and project links will be added when verified URLs are
-        supplied.
-      </p>
     </div>
   );
 }

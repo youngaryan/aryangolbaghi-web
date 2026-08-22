@@ -56,7 +56,11 @@ export default function AboutPage() {
             explanation than a short update allows.
           </p>
 
-          <section className="contact-section" aria-labelledby="contact-heading">
+          <section
+            className="contact-section"
+            id="contact"
+            aria-labelledby="contact-heading"
+          >
             <h2 id="contact-heading">Contact</h2>
             <ul className="contact-list">
               <li>

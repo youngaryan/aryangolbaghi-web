@@ -15,8 +15,8 @@ export default function WorkPage() {
         <p className="eyebrow">Engineering practice</p>
         <h1>Work</h1>
         <p>
-          Selected areas of engineering practice. This page is designed to grow
-          into detailed case studies without exposing confidential employer work.
+          Selected engineering work across production AI systems, developer
+          tooling, observability, and machine learning research infrastructure.
         </p>
       </header>
 
@@ -39,10 +39,6 @@ export default function WorkPage() {
         ))}
       </div>
 
-      <p className="page-note">
-        Individual case-study routes can be added from this structured index as
-        public project material becomes available.
-      </p>
     </div>
   );
 }
