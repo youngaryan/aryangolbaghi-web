@@ -93,6 +93,26 @@ export default function Home() {
         </div>
         <article className="featured-paper">
           <div className="paper-meta">
+            <span>Technical report</span>
+            <span>DPO-Mini</span>
+            <span>2026</span>
+          </div>
+          <h3>
+            <Link href="/research/dpo-mini">
+              Measuring the cost of a fixed reference in DPO
+            </Link>
+          </h3>
+          <p>
+            A reproducible CPU study of correctness, reference sharing and
+            caching. Cold caching reduced whole benchmark time by 11.70%
+            against a shared-base reference, with matching observed trajectories.
+          </p>
+          <Link className="small-link featured-paper-cta" href="/research/dpo-mini">
+            Read the case study <span aria-hidden="true">→</span>
+          </Link>
+        </article>
+        <article className="featured-paper">
+          <div className="paper-meta">
             <span>First Author</span>
             <span>arXiv</span>
             <span>2025</span>

@@ -5,7 +5,7 @@ import { researchItems } from "@/lib/research";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Research by Aryan Golbaghi on speech emotion recognition, fine-tuning, hyperparameter optimisation, and reliable LLM abstention.",
+    "Research by Aryan Golbaghi on DPO correctness and efficiency, speech emotion recognition, model optimisation, and reliable LLM abstention.",
   alternates: { canonical: "/research" },
 };
 

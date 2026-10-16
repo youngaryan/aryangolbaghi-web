@@ -15,6 +15,18 @@ export type ResearchItem = {
 
 export const researchItems: ResearchItem[] = [
   {
+    title: "DPO-Mini: Correctness and Reference-Caching Costs",
+    status: "Technical report",
+    role: "Independent project",
+    year: 2026,
+    description:
+      "A reproducible CPU study of DPO with LoRA, comparing separate references, a shared frozen base and cold reference caches. Includes measured runtime and memory, matched trajectories, and a documented FP32 numerical discrepancy.",
+    detailUrl: "/research/dpo-mini",
+    paperUrl: "/research/dpo-mini/report.pdf",
+    codeUrl: "https://github.com/youngaryan/dpo-mini",
+    tags: ["DPO", "LoRA", "Reproducibility", "Systems measurement"],
+  },
+  {
     title:
       "Enhancing Speech Emotion Recognition via Fine-Tuning Pre-Trained Models and Hyper-Parameter Optimisation",
     status: "Published",

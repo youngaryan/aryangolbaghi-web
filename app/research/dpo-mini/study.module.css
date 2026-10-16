@@ -1,0 +1,139 @@
+.study section[id] {
+  scroll-margin-top: 2rem;
+}
+
+.strategies {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  margin-top: 3rem;
+  background: var(--line);
+}
+
+.strategies > div {
+  padding: 2rem;
+  background: var(--surface);
+}
+
+.strategies h3,
+.finding h3 {
+  margin: 1rem 0 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.strategies p,
+.finding p,
+.bodyParagraph {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.bodyParagraph {
+  margin-top: 1.5rem;
+  max-width: 720px;
+  font-size: 1.05rem;
+}
+
+.timingFigure {
+  margin: 3.5rem 0 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid var(--line);
+}
+
+.timingFigure figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.timingFigure figcaption span,
+.timingFigure > p {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.timingFigure > p {
+  margin: 1.5rem 0 0;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 175px minmax(0, 1fr) 95px;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.25rem;
+  font-size: 0.84rem;
+}
+
+.barRow strong {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.barTrack {
+  height: 25px;
+  background: var(--surface);
+}
+
+.bar,
+.cachedBar {
+  height: 100%;
+  background: var(--muted);
+}
+
+.cachedBar {
+  background: var(--accent);
+}
+
+.range {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.finding {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+}
+
+.finding h3 {
+  margin-top: 0;
+}
+
+.finding p {
+  margin-bottom: 0;
+  max-width: 850px;
+}
+
+@media (max-width: 720px) {
+  .strategies {
+    grid-template-columns: 1fr;
+  }
+
+  .barRow {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 0.5rem 1rem;
+  }
+
+  .barRow > span {
+    grid-column: 1 / -1;
+  }
+
+  .finding {
+    padding-inline: 1.25rem;
+  }
+}

@@ -1627,3 +1627,7 @@ main {
     gap: 0.4rem;
   }
 }
+
+.featured-paper + .featured-paper {
+  margin-top: 2.5rem;
+}

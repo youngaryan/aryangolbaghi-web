@@ -10,12 +10,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/work",
     "/research",
     "/research/speech-emotion-recognition",
+    "/research/dpo-mini",
     "/about",
   ].map((path) => ({
       url: `${baseUrl}${path}`,
-      lastModified: new Date("2026-08-22T00:00:00.000Z"),
+      lastModified: new Date(
+        ["", "/research", "/research/dpo-mini"].includes(path)
+          ? "2026-10-16T00:00:00.000Z"
+          : "2026-08-22T00:00:00.000Z",
+      ),
       changeFrequency:
-        path === "/research/speech-emotion-recognition"
+        path.startsWith("/research/")
           ? ("yearly" as const)
           : path === ""
             ? ("monthly" as const)
@@ -23,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:
         path === ""
           ? 1
-          : path === "/research/speech-emotion-recognition"
+          : path.startsWith("/research/")
             ? 0.85
             : 0.8,
     }));
