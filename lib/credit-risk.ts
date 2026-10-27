@@ -2,6 +2,7 @@ import evidence from "@/lib/credit-risk.json";
 
 export const creditRisk = evidence;
 export const creditRiskPath = "/research/beyond-auc";
+export const creditRiskRepository = "https://github.com/youngaryan/beyond-auc-credit-risk";
 export const creditRiskReport = `${creditRiskPath}/report.pdf`;
 export const creditRiskArchive = `${creditRiskPath}/beyond-auc-credit-risk.zip`;
 

@@ -8,6 +8,7 @@ import {
   creditRiskModels,
   creditRiskPath,
   creditRiskReport,
+  creditRiskRepository,
   formatRiskNumber as number,
   logisticFoldWins,
 } from "@/lib/credit-risk";
@@ -105,6 +106,9 @@ export default function BeyondAucPage() {
         <div className="case-actions" aria-label="Research resources">
           <a className="case-button case-button-primary" href={creditRiskReport}>
             Read the research report <span aria-hidden="true">↗</span>
+          </a>
+          <a className="case-button" href={creditRiskRepository}>
+            View on GitHub <span aria-hidden="true">↗</span>
           </a>
           <a className="case-button" href={creditRiskArchive} download>
             Download source &amp; evidence <span aria-hidden="true">↓</span>
@@ -365,6 +369,9 @@ export default function BeyondAucPage() {
               discusses all {study.validation.artifact_verification.numbered_figures} original figures.
             </p>
             <div className="case-actions case-actions-inline">
+              <a className="case-button" href={creditRiskRepository}>
+                Browse the repository <span aria-hidden="true">↗</span>
+              </a>
               <a className="case-button case-button-primary" href={creditRiskArchive} download>
                 Download the project (ZIP) <span aria-hidden="true">↓</span>
               </a>

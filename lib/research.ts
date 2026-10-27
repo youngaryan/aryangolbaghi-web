@@ -1,4 +1,4 @@
-import { creditRiskPath, creditRiskReport, creditRiskSummary } from "@/lib/credit-risk";
+import { creditRiskPath, creditRiskReport, creditRiskRepository, creditRiskSummary } from "@/lib/credit-risk";
 
 export type ResearchItem = {
   title: string;
@@ -26,6 +26,7 @@ export const researchItems: ResearchItem[] = [
       creditRiskSummary,
     detailUrl: creditRiskPath,
     paperUrl: creditRiskReport,
+    codeUrl: creditRiskRepository,
     tags: ["Credit risk", "Probability calibration", "Statistical validation", "Python"],
   },
   {
