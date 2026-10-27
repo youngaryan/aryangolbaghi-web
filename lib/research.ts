@@ -1,3 +1,5 @@
+import { creditRiskPath, creditRiskReport, creditRiskSummary } from "@/lib/credit-risk";
+
 export type ResearchItem = {
   title: string;
   status: string;
@@ -14,6 +16,18 @@ export type ResearchItem = {
 };
 
 export const researchItems: ResearchItem[] = [
+  {
+    title: "Beyond AUC: Credit Risk Probability Modelling and Validation",
+    status: "Technical report",
+    role: "Independent project",
+    year: 2026,
+    description:
+      "An empirical study of probability calibration, statistical uncertainty and sampling bias. " +
+      creditRiskSummary,
+    detailUrl: creditRiskPath,
+    paperUrl: creditRiskReport,
+    tags: ["Credit risk", "Probability calibration", "Statistical validation", "Python"],
+  },
   {
     title: "DPO-Mini: Correctness and Reference-Caching Costs",
     status: "Technical report",

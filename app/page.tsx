@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArticleList } from "@/components/article-list";
 import { getAllWriting } from "@/lib/writing";
+import { creditRiskPath, creditRiskSummary } from "@/lib/credit-risk";
 
 const workItems = [
   {
@@ -91,6 +92,22 @@ export default function Home() {
             All research <span aria-hidden="true">→</span>
           </Link>
         </div>
+        <article className="featured-paper">
+          <div className="paper-meta">
+            <span>Technical report</span>
+            <span>Credit risk</span>
+            <span>2026</span>
+          </div>
+          <h3>
+            <Link href={creditRiskPath}>
+              Beyond AUC: when better ranking isn’t enough
+            </Link>
+          </h3>
+          <p>{creditRiskSummary}</p>
+          <Link className="small-link featured-paper-cta" href={creditRiskPath}>
+            Read the case study <span aria-hidden="true">→</span>
+          </Link>
+        </article>
         <article className="featured-paper">
           <div className="paper-meta">
             <span>Technical report</span>

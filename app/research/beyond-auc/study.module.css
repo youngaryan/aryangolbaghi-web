@@ -1,0 +1,121 @@
+.study section[id] {
+  scroll-margin-top: 2rem;
+}
+
+.study .introTitle {
+  max-width: 1000px;
+}
+
+.finding {
+  margin-top: 3rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+}
+
+.finding h3 {
+  margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.finding p,
+.bodyParagraph {
+  max-width: 850px;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.figure {
+  margin: 3.5rem 0 0;
+}
+
+.imageLink {
+  display: block;
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.imageLink:hover,
+.imageLink:focus-visible {
+  border-color: var(--accent);
+}
+
+.imageLink img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure figcaption {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.figure figcaption a,
+.evidenceLinks a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+.figure figcaption a {
+  white-space: nowrap;
+}
+
+.resultsTable {
+  min-width: 640px;
+  font-variant-numeric: tabular-nums;
+}
+
+.resultsTable th:not(:first-child),
+.resultsTable td {
+  text-align: right;
+}
+
+.equation {
+  margin: 2rem 0 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.evidenceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  font-size: 0.85rem;
+  list-style: none;
+}
+
+.study footer p a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 720px) {
+  .figure figcaption {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .equation {
+    padding-inline: 1rem;
+    font-size: 0.75rem;
+  }
+}

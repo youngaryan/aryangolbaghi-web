@@ -9,15 +9,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/writing",
     "/work",
     "/research",
+    "/research/beyond-auc",
     "/research/speech-emotion-recognition",
     "/research/dpo-mini",
     "/about",
   ].map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date(
-        ["", "/research", "/research/dpo-mini"].includes(path)
-          ? "2026-10-16T00:00:00.000Z"
-          : "2026-08-22T00:00:00.000Z",
+        ["", "/research", "/research/beyond-auc"].includes(path)
+          ? "2026-10-27T00:00:00.000Z"
+          : path === "/research/dpo-mini"
+            ? "2026-10-16T00:00:00.000Z"
+            : "2026-08-22T00:00:00.000Z",
       ),
       changeFrequency:
         path.startsWith("/research/")
