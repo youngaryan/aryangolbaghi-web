@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/writing",
     "/work",
     "/research",
+    "/research/grpo-routing",
     "/research/beyond-auc",
     "/research/speech-emotion-recognition",
     "/research/dpo-mini",
@@ -16,11 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date(
-        ["", "/research", "/research/beyond-auc"].includes(path)
-          ? "2026-10-27T00:00:00.000Z"
-          : path === "/research/dpo-mini"
-            ? "2026-10-16T00:00:00.000Z"
-            : "2026-08-22T00:00:00.000Z",
+        ["", "/research", "/research/grpo-routing"].includes(path)
+          ? "2026-11-15T00:00:00.000Z"
+          : path === "/research/beyond-auc"
+            ? "2026-10-27T00:00:00.000Z"
+            : path === "/research/dpo-mini"
+              ? "2026-10-16T00:00:00.000Z"
+              : "2026-08-22T00:00:00.000Z",
       ),
       changeFrequency:
         path.startsWith("/research/")

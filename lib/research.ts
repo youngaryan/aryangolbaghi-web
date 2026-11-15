@@ -1,4 +1,5 @@
 import { creditRiskPath, creditRiskReport, creditRiskRepository, creditRiskSummary } from "@/lib/credit-risk";
+import { grpoRoutingPath, grpoRoutingReport, grpoRoutingSummary } from "@/lib/grpo-routing";
 
 export type ResearchItem = {
   title: string;
@@ -16,6 +17,19 @@ export type ResearchItem = {
 };
 
 export const researchItems: ResearchItem[] = [
+  {
+    title:
+      "When Is GRPO Worth It? A Compute- and Risk-Aware Study of Tiny Language Models for Banking Intent Routing",
+    status: "Technical report",
+    role: "Independent project",
+    year: 2026,
+    description:
+      "A CPU-only comparison of GRPO, supervised fine-tuning and a linear baseline under explicit label, compute and cost accounting. " +
+      grpoRoutingSummary,
+    detailUrl: grpoRoutingPath,
+    paperUrl: grpoRoutingReport,
+    tags: ["GRPO", "Fine-tuning", "Cost-sensitive evaluation", "Intent routing"],
+  },
   {
     title: "Beyond AUC: Credit Risk Probability Modelling and Validation",
     status: "Technical report",

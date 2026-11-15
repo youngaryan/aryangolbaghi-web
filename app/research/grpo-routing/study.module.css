@@ -1,0 +1,141 @@
+.study section[id] {
+  scroll-margin-top: 2rem;
+}
+
+.finding {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+}
+
+.finding h3 {
+  margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.finding p,
+.bodyParagraph {
+  max-width: 850px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.finding p {
+  margin: 1rem 0 0;
+}
+
+.bodyParagraph {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.barFigure {
+  margin: 3.5rem 0 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid var(--line);
+}
+
+.barFigure figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.barFigure figcaption span,
+.barFigure > p {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.barFigure > p {
+  margin: 1.5rem 0 0;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr) 60px;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.25rem;
+  font-size: 0.84rem;
+}
+
+.barRow strong {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.barTrack {
+  height: 25px;
+  background: var(--surface);
+}
+
+.bar,
+.accentBar {
+  height: 100%;
+  background: var(--muted);
+}
+
+.accentBar {
+  background: var(--accent);
+}
+
+.figure {
+  margin: 3.5rem 0 0;
+}
+
+.imageLink {
+  display: block;
+  max-width: 900px;
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.imageLink:hover,
+.imageLink:focus-visible {
+  border-color: var(--accent);
+}
+
+.imageLink img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure figcaption {
+  max-width: 900px;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.resultsTable {
+  min-width: 640px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 720px) {
+  .barRow {
+    grid-template-columns: minmax(0, 1fr) 60px;
+    gap: 0.5rem 1rem;
+  }
+
+  .barRow > span {
+    grid-column: 1 / -1;
+  }
+
+  .finding {
+    padding-inline: 1.25rem;
+  }
+}

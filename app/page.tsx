@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArticleList } from "@/components/article-list";
 import { getAllWriting } from "@/lib/writing";
 import { creditRiskPath, creditRiskSummary } from "@/lib/credit-risk";
+import { grpoRoutingPath, grpoRoutingSummary } from "@/lib/grpo-routing";
 
 const workItems = [
   {
@@ -92,6 +93,22 @@ export default function Home() {
             All research <span aria-hidden="true">→</span>
           </Link>
         </div>
+        <article className="featured-paper">
+          <div className="paper-meta">
+            <span>Technical report</span>
+            <span>GRPO</span>
+            <span>2026</span>
+          </div>
+          <h3>
+            <Link href={grpoRoutingPath}>
+              When is GRPO worth it? A compute- and risk-aware study
+            </Link>
+          </h3>
+          <p>{grpoRoutingSummary}</p>
+          <Link className="small-link featured-paper-cta" href={grpoRoutingPath}>
+            Read the case study <span aria-hidden="true">→</span>
+          </Link>
+        </article>
         <article className="featured-paper">
           <div className="paper-meta">
             <span>Technical report</span>
